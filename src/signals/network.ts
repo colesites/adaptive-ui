@@ -3,6 +3,7 @@ export function detectSlowNetwork(onDetect: () => void) {
   if (!connection) return;
 
   if (
+    connection.effectiveType === "3g" ||
     connection.effectiveType === "2g" ||
     connection.effectiveType === "slow-2g"
   ) {
