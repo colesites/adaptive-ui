@@ -1,10 +1,10 @@
-# adaptive-ui
+# @c-technology/adaptive-ui
 
 > **Human-aware UI adaptation for modern web apps**
 
-adaptive-ui is a **TypeScript-first library** that helps your UI adapt to **users**, not just screen sizes.
+`@c-technology/adaptive-ui` is a **TypeScript-first library** that helps your UI adapt to **users**, not just screen sizes.
 
-Instead of only responding to `mobile`, `desktop`, or `tablet`, adaptive-ui reacts to **real conditions** like:
+Instead of only responding to `mobile`, `desktop`, or `tablet`, this library reacts to **real conditions** like:
 
 * slow network
 * low battery
@@ -16,15 +16,14 @@ This README explains everything **from zero**, assuming you are a beginner.
 
 ---
 
-## 🚨 The Problem (Why adaptive-ui Exists)
+## 🚨 The Problem (Why @c-technology/adaptive-ui Exists)
 
 Most web apps today:
 
 * look responsive
 * but feel frustrating
 
-Why?
-Because they adapt to **screens**, not **people**.
+Why? Because they adapt to **screens**, not **people**.
 
 Examples:
 
@@ -41,17 +40,17 @@ That approach:
 * is hard to reason about
 * creates messy code
 
-**adaptive-ui solves this by acting as a decision layer for your UI.**
+`@c-technology/adaptive-ui` solves this by acting as a **decision layer** for your UI.
 
 ---
 
-## 🧠 What adaptive-ui Is (And Is NOT)
+## 🧠 What It Is (And Is NOT)
 
 ### ✅ What it IS
 
 * a **logic layer** for UI behavior
 * a way to detect user context
-* a strategy system for adapting interfaces
+* a **strategy system** for adapting interfaces
 * framework-friendly (React, Next.js, etc.)
 
 ### ❌ What it is NOT
@@ -62,13 +61,11 @@ That approach:
 * ❌ an AI / ML system
 * ❌ a tracking library
 
-adaptive-ui **never renders UI**. It only helps you make better decisions.
+This library **never renders UI**. It only helps you make better decisions.
 
 ---
 
-## 🏗️ How adaptive-ui Works (Simple Explanation)
-
-adaptive-ui works in **three steps**:
+## 🏗️ How It Works (Simple Explanation)
 
 ### 1️⃣ Detect Signals
 
@@ -80,7 +77,7 @@ Signals are things like:
 
 ### 2️⃣ Build Context
 
-From signals, adaptive-ui builds a **context**, such as:
+From signals, it builds a **context**, such as:
 
 * `slow-network`
 * `impatient`
@@ -102,25 +99,24 @@ Example:
 ## 📦 Installation
 
 ```bash
-npm install adaptive-ui
+npm install @c-technology/adaptive-ui
 ```
 
 or
 
 ```bash
-pnpm install adaptive-ui
+pnpm add @c-technology/adaptive-ui
+```
+or
+
+```bash
+bun add @c-technology/adaptive-ui
 ```
 
 or
 
 ```bash
-bun add adaptive-ui
-```
-
-or
-
-```bash
-yarn add adaptive-ui
+yarn add @c-technology/adaptive-ui
 ```
 
 ---
@@ -130,10 +126,8 @@ yarn add adaptive-ui
 ### Step 1: Import the hook
 
 ```ts
-import { useAdaptive } from "adaptive-ui";
+import { useAdaptive } from "@c-technology/adaptive-ui";
 ```
-
----
 
 ### Step 2: Use it inside a component
 
@@ -151,25 +145,21 @@ This gives you access to the **adaptive engine**.
 
 ## 🧩 Context Detection (Beginner Friendly)
 
-adaptive-ui automatically detects some conditions.
+Example: Check if user is impatient
 
-### Example: Check if user is impatient
-
-```tsx
+```ts
 if (ui.has("impatient")) {
   console.log("User is impatient");
 }
 ```
 
-You don’t need to know *how* impatience is detected.
-
-That logic is handled internally.
+You don’t need to know how impatience is detected — the logic is handled internally.
 
 ---
 
 ## 🧠 Strategies (The Core Feature)
 
-Strategies define **how your UI should react**.
+Define **how your UI should react**.
 
 ### Example: Lite UI on slow network
 
@@ -182,12 +172,6 @@ ui.strategy({
 });
 ```
 
-This means:
-
-> If network is slow → switch to lite UI
-
----
-
 ### Example: Focus mode for impatient users
 
 ```ts
@@ -199,15 +183,13 @@ ui.strategy({
 });
 ```
 
----
-
 ### Run strategies
 
 ```ts
 ui.run();
 ```
 
-This applies all matching strategies.
+Applies all matching strategies.
 
 ---
 
@@ -225,19 +207,19 @@ This applies all matching strategies.
 }
 ```
 
-Your UI now adapts **without changing components**.
+Your UI adapts without changing components.
 
 ---
 
-## 🧪 Debugging (Very Important)
+## 🧪 Debugging
 
-To understand *why* the UI changed:
+Check why the UI changed:
 
 ```ts
 console.log(ui.explain());
 ```
 
-Output:
+Example output:
 
 ```ts
 {
@@ -246,25 +228,19 @@ Output:
 }
 ```
 
-This helps avoid confusion during development.
-
 ---
 
 ## ♿ Accessibility-Friendly by Design
 
-adaptive-ui helps you:
-
-* reduce motion
-* simplify layouts
-* increase clarity
-
-Without extra libraries.
+* reduces motion
+* simplifies layouts
+* increases clarity
 
 It reacts to **behavior**, not user labels.
 
 ---
 
-## 🚀 Why Use adaptive-ui?
+## 🚀 Why Use It?
 
 * cleaner UI logic
 * fewer edge cases
@@ -272,13 +248,9 @@ It reacts to **behavior**, not user labels.
 * no heavy setup
 * beginner-friendly
 
-Once added, it quietly improves your app.
-
 ---
 
-## 🧱 What adaptive-ui Will NEVER Do
-
-To keep trust high:
+## 🧱 What It Will NEVER Do
 
 * ❌ no analytics
 * ❌ no tracking
@@ -311,7 +283,7 @@ Not planned:
 
 > Good UI should feel invisible.
 
-adaptive-ui helps you build interfaces that **respect users**, without extra complexity.
+It helps you build interfaces that **respect users** without extra complexity.
 
 ---
 
@@ -329,4 +301,4 @@ If you are a beginner:
 * add one strategy
 * observe the effect
 
-adaptive-ui grows **with your understanding**, not against it.
+`@c-technology/adaptive-ui` grows with your understanding, not against it.
